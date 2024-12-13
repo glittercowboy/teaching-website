@@ -1455,7 +1455,7 @@ p {
 
 /* Pricing Section */
 .pricing-section {
-    background-color: var(--white);
+    background-color: var(--accent);
     padding: 8rem 0;
     color: var(--black);
 }
@@ -1469,7 +1469,7 @@ p {
     text-transform: uppercase;
     letter-spacing: 0.05em;
     line-height: 1.1;
-    color: var(--black);
+    color: var(--white);
 }
 
 .pricing-container {
@@ -1478,6 +1478,7 @@ p {
     padding: 3rem;
     background-color: var(--black);
     color: var(--white);
+    border: 4px dashed var(--white);
 }
 
 .features-list {
