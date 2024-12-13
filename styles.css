@@ -641,16 +641,17 @@ p {
 }
 
 .testimonial-column {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
+    display: grid;
+    grid-template-rows: auto auto auto 1fr auto;
+    justify-items: center;
+    align-content: start;
+    gap: 1rem;
+    height: 100%;
 }
 
 .testimonial-image {
     width: 200px;
     height: 200px;
-    margin-bottom: 1.5rem;
     overflow: hidden;
 }
 
@@ -662,30 +663,27 @@ p {
 
 .testimonial-column h5 {
     color: var(--black);
-    margin-bottom: 0.5rem;
     font-weight: 700;
+    margin: 0;
 }
 
 .testimonial-column h6 {
     color: var(--black);
-    margin-bottom: 1rem;
+    margin: 0;
 }
 
 .testimonial-column p {
     color: var(--black);
-    margin-bottom: 1rem;
     line-height: 1.6;
+    margin: 0;
+    text-align: center;
 }
 
 .testimonial-column .stars {
-    margin-top: 0.5rem;
-    margin-bottom: 0.5rem;
-}
-
-.stars {
     color: var(--accent);
     font-size: 1.5rem;
     letter-spacing: 0.2em;
+    margin: 0;
 }
 
 /* Responsive adjustments */
@@ -1019,8 +1017,8 @@ p {
 
 /* Accent Testimonials Section */
 .testimonials-accent {
-    background-color: var(--accent);
-    padding: 6rem 0 4rem;  /* Reduced bottom padding to accommodate dots */
+    background-color: var(--white);
+    padding: 6rem 0 4rem;
     position: relative;
     overflow: hidden;
 }
@@ -1044,7 +1042,7 @@ p {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 2rem 2rem 4rem;  /* Added bottom padding to prevent overlap with dots */
+    padding: 2rem 2rem 4rem;
     text-align: center;
     opacity: 0;
     transition: opacity 0.5s ease;
@@ -1055,9 +1053,39 @@ p {
     opacity: 1;
 }
 
-.testimonial-content {
+.testimonial-item img {
+    width: 186px;  /* 124px * 1.5 */
+    height: 186px;  /* 124px * 1.5 */
+    border-radius: 50%;
+    margin-bottom: 1.5rem;
+    object-fit: cover;
+}
+
+.testimonial-item h5 {
+    color: var(--black);
+    margin-bottom: 0.5rem;
+    font-weight: 700;
+}
+
+.testimonial-item h6 {
+    color: var(--black);
+    margin-bottom: 1.5rem;
+    font-size: 1.333rem;
+}
+
+.testimonial-item p {
+    color: var(--black);
+    margin: 1.5rem auto;
+    line-height: 1.8;
     max-width: 800px;
-    margin: 0 auto;
+    font-style: italic;
+}
+
+.testimonial-item .stars {
+    color: var(--accent);
+    font-size: 1.5rem;
+    letter-spacing: 0.2em;
+    margin-top: 1rem;
 }
 
 .carousel-dots {
@@ -1069,7 +1097,7 @@ p {
     gap: 0.5rem;
     z-index: 2;
     padding: 1rem 0;
-    background: linear-gradient(to bottom, transparent, var(--accent));
+    background: linear-gradient(to bottom, transparent, var(--white));
     width: 100%;
     justify-content: center;
 }
@@ -1078,13 +1106,13 @@ p {
     width: 10px;
     height: 10px;
     border-radius: 50%;
-    background-color: rgba(240, 240, 240, 0.5);
+    background-color: rgba(13, 12, 13, 0.3);
     cursor: pointer;
     transition: background-color 0.3s ease;
 }
 
 .carousel-dot.active {
-    background-color: var(--white);
+    background-color: var(--black);
 }
 
 .carousel-arrow {
@@ -1094,7 +1122,7 @@ p {
     width: 50px;
     height: 50px;
     background-color: var(--black);
-    border: 2px solid var(--white);
+    border: 2px solid var(--black);
     border-radius: 50%;
     display: flex;
     align-items: center;
@@ -1117,42 +1145,6 @@ p {
 
 .carousel-arrow.next {
     right: 2rem;
-}
-
-.testimonial-item img {
-    width: 124px;
-    height: 124px;
-    border-radius: 50%;
-    margin-bottom: 1.5rem;
-    object-fit: cover;
-}
-
-.testimonial-item h5 {
-    color: var(--white);
-    margin-bottom: 0.5rem;
-    font-weight: 700;
-    font-size: 1.777rem;
-}
-
-.testimonial-item h6 {
-    color: var(--white);
-    margin-bottom: 1.5rem;
-    font-size: 1.333rem;
-}
-
-.testimonial-item p {
-    color: var(--black);
-    margin: 1.5rem auto;
-    line-height: 1.8;
-    max-width: 800px;
-    font-style: italic;
-}
-
-.testimonial-item .stars {
-    color: var(--white);
-    font-size: 1.5rem;
-    letter-spacing: 0.2em;
-    margin-top: 1rem;
 }
 
 /* Responsive adjustments */
